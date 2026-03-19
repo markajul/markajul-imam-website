@@ -3,669 +3,203 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Markajul Imam Asthatobi</title>
+
+  <title>Markajul Imam Ash-Shatibiyah | Quran & Islamic Studies Dhaka</title>
+  <meta name="description" content="Certified Quran & Tajweed classes, 10 Qirat Ijazah, and Arabic language in Demra, Dhaka." />
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Markajul Imam Ash-Shatibiyah",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "West Sanarpar, Demra",
+      "addressLocality": "Dhaka",
+      "addressCountry": "BD"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
+    :root {
+      --emerald: #054a35;
+      --emerald-dark: #022c20;
+      --gold: #c59729;
+      --gold-light: #e8b84b;
+      --cream: #fdf8f0;
+      --white: #ffffff;
+      --text: #1a1208;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    body {
-      background: #ecfdf5;
-      color: #064e3b;
-      line-height: 1.6;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Cormorant Garamond', serif; background: var(--cream); color: var(--text); line-height: 1.6; overflow-x: hidden; }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    header {
-      background: rgba(255,255,255,0.95);
-      border-bottom: 1px solid #a7f3d0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(8px);
-    }
-
-    .header-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      padding: 16px 0;
-      flex-wrap: wrap;
-    }
-
-    .brand h1 {
-      font-size: 24px;
-      font-weight: 700;
-    }
-
-    .brand .arabic {
-      font-size: 22px;
-      font-weight: 700;
-      color: #047857;
-      text-align: center;
-    }
-
-    .brand .tagline {
-      font-size: 14px;
-      color: #475569;
-    }
-
+    /* ── NAVIGATION ── */
     nav {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      font-size: 14px;
-      font-weight: 600;
+      position: fixed; top: 0; width: 100%; height: 80px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; background: rgba(253, 248, 240, 0.95);
+      backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid rgba(197, 151, 41, 0.2);
     }
+    .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-text h1 { font-size: 1.2rem; color: var(--emerald); font-weight: 700; }
+    .logo-text p { font-family: 'Noto Naskh Arabic', serif; font-size: 0.8rem; color: var(--gold); }
 
-    .btn {
-      border: none;
-      padding: 12px 20px;
-      border-radius: 14px;
-      cursor: pointer;
-      font-weight: 700;
-    }
+    .nav-links { display: flex; gap: 30px; align-items: center; }
+    .nav-links a { text-decoration: none; color: var(--text); font-weight: 600; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; transition: var(--transition); }
+    .nav-links a:hover { color: var(--gold); }
+    .btn-nav { background: var(--emerald); color: var(--gold-light) !important; padding: 10px 20px; border-radius: 4px; }
 
-    .btn-primary {
-      background: linear-gradient(to right, #047857, #eab308);
-      color: white;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
-
-    .btn-secondary {
-      background: white;
-      border: 1px solid #cbd5e1;
-      color: #1e293b;
-    }
-
+    /* ── HERO SECTION ── */
     .hero {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
-      align-items: center;
-      padding: 70px 0;
+      height: 100vh; background: linear-gradient(rgba(5, 74, 53, 0.9), rgba(2, 44, 32, 0.9)), url('https://images.unsplash.com/photo-1590076215667-873d43468593?auto=format&fit=crop&q=80') center/cover;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; color: white; padding: 0 20px;
     }
+    .hero h2 { font-family: 'Noto Naskh Arabic', serif; font-size: 3rem; color: var(--gold-light); margin-bottom: 10px; }
+    .hero h1 { font-size: 4rem; font-weight: 300; margin-bottom: 20px; line-height: 1.1; }
+    .hero h1 em { font-style: italic; color: var(--gold-light); }
+    .hero p { max-width: 600px; font-size: 1.2rem; color: rgba(255, 255, 255, 0.8); margin-bottom: 40px; }
 
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 20px;
+    .btn-primary { 
+      padding: 15px 40px; background: var(--gold); color: var(--emerald-dark); 
+      text-decoration: none; font-weight: 700; text-transform: uppercase; 
+      border-radius: 4px; transition: var(--transition); display: inline-block;
     }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
 
-    .badge {
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 700;
+    /* ── COURSES GRID ── */
+    .section { padding: 100px 5%; max-width: 1200px; margin: 0 auto; }
+    .section-title { text-align: center; margin-bottom: 60px; }
+    .section-title h2 { font-size: 3rem; color: var(--emerald); }
+    .section-title p { color: var(--gold); text-transform: uppercase; letter-spacing: 2px; font-weight: 600; }
+
+    .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    .course-card { 
+      background: white; border: 1px solid rgba(197, 151, 41, 0.2); padding: 40px; 
+      border-radius: 8px; transition: var(--transition); position: relative; overflow: hidden;
     }
+    .course-card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: var(--gold); transition: var(--transition); }
+    .course-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(5, 74, 53, 0.1); }
+    .course-card:hover::before { height: 10px; background: var(--emerald); }
 
-    .badge-gray {
-      background: #e2e8f0;
-      color: #334155;
+    .course-card h3 { font-size: 1.8rem; margin-bottom: 10px; color: var(--emerald); }
+    .course-card .arabic { font-family: 'Noto Naskh Arabic', serif; color: var(--gold); font-size: 1.2rem; margin-bottom: 15px; display: block; }
+    .course-card p { font-size: 1.05rem; color: #555; margin-bottom: 25px; }
+
+    /* ── MODALS ── */
+    .modal-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.8); backdrop-filter: blur(5px);
+      display: none; z-index: 2000; align-items: center; justify-content: center; padding: 20px;
     }
-
-    .badge-green {
-      background: #d1fae5;
-      color: #065f46;
+    .modal-content {
+      background: white; width: 100%; max-width: 600px; border-radius: 12px;
+      overflow: hidden; position: relative; animation: slideUp 0.4s ease;
     }
+    @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
-    .badge-yellow {
-      background: #fef3c7;
-      color: #92400e;
-    }
-
-    .hero h2 {
-      font-size: 46px;
-      line-height: 1.15;
-      margin-bottom: 18px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      color: #047857;
-      margin-bottom: 24px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .stats {
-      background: white;
-      padding: 24px;
-      border-radius: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-      border: 1px solid #e2e8f0;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-
-    .stat-box {
-      background: #d1fae5;
-      padding: 18px;
-      border-radius: 18px;
-    }
-
-    .stat-box h3 {
-      font-size: 30px;
-      margin-bottom: 6px;
-    }
-
-    section {
-      padding: 70px 0;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .section-title p:first-child {
-      font-size: 13px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #64748b;
-      font-weight: 700;
-    }
-
-    .section-title h3 {
-      font-size: 36px;
-      margin: 10px 0 12px;
-    }
-
-    .section-title .desc {
-      max-width: 700px;
-      margin: auto;
-      color: #047857;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-    }
-
-    .card {
-      background: white;
-      padding: 24px;
-      border-radius: 24px;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-    }
-
-    .course-level {
-      display: inline-block;
-      background: #d1fae5;
-      color: #334155;
-      padding: 6px 12px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .course-title {
-      font-size: 28px;
-      margin: 16px 0 10px;
-      font-weight: 700;
-    }
-
-    .course-tags {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 12px;
-    }
-
-    .mini-tag {
-      font-size: 12px;
-      padding: 5px 10px;
-      border-radius: 10px;
-    }
-
-    .about-wrap {
-      background: white;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      align-items: center;
-    }
-
-    .about-box {
-      background: #d1fae5;
-      padding: 30px;
-      border-radius: 24px;
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-    }
-
-    .feature-item {
-      border: 1px solid #a7f3d0;
-      background: #ecfdf5;
-      padding: 18px;
-      border-radius: 18px;
-      font-weight: 600;
-    }
-
-    .admission {
-      background: linear-gradient(to right, #047857, #eab308);
-      color: white;
-      border-radius: 32px;
-      padding: 40px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.10);
-    }
-
-    .admission p.small {
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 13px;
-      color: #e2e8f0;
-      margin-bottom: 10px;
-    }
-
-    .admission h3 {
-      font-size: 36px;
-      margin-bottom: 15px;
-    }
-
-    .admission-form {
-      background: white;
-      color: #064e3b;
-      padding: 24px;
-      border-radius: 24px;
-    }
-
-    .admission-form input,
-    .admission-form textarea {
-      width: 100%;
-      margin-bottom: 12px;
-      padding: 14px;
-      border-radius: 14px;
-      border: 1px solid #cbd5e1;
-      font-size: 15px;
-    }
-
-    footer {
-      background: white;
-      border-top: 1px solid #a7f3d0;
-      padding: 45px 0;
-      margin-top: 50px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-    }
-
-    .footer-grid h4,
-    .footer-grid h5 {
-      margin-bottom: 12px;
-    }
-
-    .footer-links p,
-    .contact p {
-      margin-bottom: 8px;
-      color: #047857;
-    }
-
-    iframe {
-      width: 100%;
-      height: 170px;
-      border: 0;
-      border-radius: 16px;
-      margin-top: 12px;
-    }
-
-    .whatsapp {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      background: #16a34a;
-      color: white;
-      padding: 14px 20px;
-      border-radius: 999px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-      font-weight: 700;
-    }
-
-    .admin-toggle {
-      position: fixed;
-      right: 20px;
-      bottom: 80px;
-      display: none;
-      background: white;
-      border: 1px solid #a7f3d0;
-      padding: 10px 16px;
-      border-radius: 999px;
-      font-weight: 700;
-      cursor: pointer;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
-
-    .admin-panel {
-      display: none;
-      max-width: 900px;
-      margin: 0 auto 50px;
-      background: white;
-      padding: 30px;
-      border-radius: 30px;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.07);
-    }
-
-    .admin-panel h3 {
-      margin-bottom: 18px;
-    }
-
-    .admin-panel input {
-      width: 100%;
-      padding: 14px;
-      margin-bottom: 12px;
-      border-radius: 14px;
-      border: 1px solid #cbd5e1;
-    }
-
-    .login-error {
-      color: #dc2626;
-      margin-bottom: 10px;
-      font-size: 14px;
-      font-weight: 700;
-    }
-
+    /* ── MOBILE ── */
     @media (max-width: 768px) {
-      .hero h2 {
-        font-size: 34px;
-      }
-
-      .section-title h3,
-      .admission h3 {
-        font-size: 28px;
-      }
-
-      nav {
-        display: none;
-      }
+      .nav-links { display: none; }
+      .hero h1 { font-size: 2.5rem; }
+      .hero h2 { font-size: 2rem; }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="container header-inner">
-      <div class="brand">
-        <h1 id="siteName">Markajul Imam Asthatobi</h1>
-        <div class="arabic">مركز الإمام الشاطبية</div>
-        <div class="tagline" id="siteTagline">Trusted Islamic education platform</div>
+  <nav>
+    <a href="#" class="logo">
+      <div class="logo-text">
+        <h1>Markajul Imam Ash-Shatibiyah</h1>
+        <p>مركز الإمام الشاطبية</p>
       </div>
-
-      <nav>
-        <a href="#home">Home / হোম</a>
-        <a href="#courses">Courses / কোর্সসমূহ</a>
-        <a href="#about">About / সম্পর্কে</a>
-        <a href="#notices">Notices / নোটিশ</a>
-        <a href="#contact">Contact / যোগাযোগ</a>
-      </nav>
-
-      <button class="btn btn-primary">Apply Now / ভর্তি করুন</button>
+    </a>
+    <div class="nav-links">
+      <a href="#courses">Programmes</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="btn-nav">Apply Now</a>
     </div>
-  </header>
+  </nav>
 
-  <section id="home">
-    <div class="container hero">
-      <div>
-        <div class="badges">
-          <div class="badge badge-gray">Trusted Islamic education platform</div>
-          <div class="badge badge-green">Online (Abroad Only)</div>
-          <div class="badge badge-yellow">Offline (Bangladesh)</div>
-        </div>
+  <section class="hero">
+    <h2>مركز الإمام الشاطبية</h2>
+    <h1>Illuminating Minds<br>Through <em>Sacred Knowledge</em></h1>
+    <p>A premier institute dedicated to the authentic transmission of Quranic sciences and Islamic studies in Dhaka.</p>
+    <a href="#contact" class="btn-primary">Start Your Journey</a>
+  </section>
 
-        <h2 id="heroTitle">Learn with confidence, grow with knowledge</h2>
-        <p id="heroText">
-          A modern Islamic education website for students who want quality learning, caring teachers, and flexible online and offline classes.
-        </p>
-
-        <div class="hero-buttons">
-          <button class="btn btn-primary">Get Started / শুরু করুন</button>
-          <button class="btn btn-secondary">View Courses / কোর্স দেখুন</button>
-        </div>
+  <section class="section" id="courses">
+    <div class="section-title">
+      <p>Our Specializations</p>
+      <h2>Academic Programmes</h2>
+    </div>
+    <div class="course-grid">
+      <div class="course-card">
+        <span class="arabic">القرآن الكريم والتجويد</span>
+        <h3>Quran & Tajweed</h3>
+        <p>Master the rules of Tajweed and perfect your recitation with certified Huffaz. From basic to Ijazah.</p>
+        <button onclick="toggleModal('modal-quran')" class="btn-primary" style="padding: 10px 20px; font-size: 0.8rem;">Learn More</button>
       </div>
-
-      <div class="stats">
-        <div class="stats-grid">
-          <div class="stat-box">
-            <h3>1,200+</h3>
-            <p>Students Enrolled</p>
-          </div>
-          <div class="stat-box">
-            <h3>25+</h3>
-            <p>Qualified Teachers</p>
-          </div>
-          <div class="stat-box">
-            <h3>3+</h3>
-            <p>Courses & Programs</p>
-          </div>
-          <div class="stat-box">
-            <h3>95%</h3>
-            <p>Parent Satisfaction</p>
-          </div>
-        </div>
+      <div class="course-card">
+        <span class="arabic">القراءات العشر</span>
+        <h3>10 Qirat Ijazah</h3>
+        <p>A prestigious programme in the ten authentic modes of Quranic recitation with a connected chain.</p>
+        <button onclick="toggleModal('modal-qirat')" class="btn-primary" style="padding: 10px 20px; font-size: 0.8rem;">Learn More</button>
+      </div>
+      <div class="course-card">
+        <span class="arabic">اللغة العربية</span>
+        <h3>Arabic Language</h3>
+        <p>Classical Arabic grammar, morphology, and rhetoric designed for understanding the Divine speech.</p>
+        <button onclick="toggleModal('modal-arabic')" class="btn-primary" style="padding: 10px 20px; font-size: 0.8rem;">Learn More</button>
       </div>
     </div>
   </section>
 
-  <section id="courses">
-    <div class="container">
-      <div class="section-title">
-        <p>Our Courses / কোর্সসমূহ</p>
-        <h3>Popular learning programs / জনপ্রিয় কোর্সসমূহ</h3>
-        <p class="desc">
-          Choose from carefully designed programs for students of different ages and levels, available in both online and offline formats.
-        </p>
+  <div class="modal-overlay" id="modal-quran" onclick="closeAllModals(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <div style="background: var(--emerald); padding: 40px; color: white;">
+        <h2 style="font-size: 2rem;">Quran & Tajweed</h2>
+        <p style="font-family: 'Noto Naskh Arabic'; font-size: 1.5rem; color: var(--gold-light);">القرآن الكريم والتجويد</p>
       </div>
-
-      <div class="grid-3">
-        <div class="card">
-          <span class="course-level">Beginner to Advanced</span>
-          <div class="course-title">Quran & Tajweed</div>
-          <div class="course-tags">
-            <span class="mini-tag badge-green">Online (Abroad)</span>
-            <span class="mini-tag badge-yellow">Offline (Bangladesh)</span>
-          </div>
-          <p>
-            Ijazah Mutasil Quran course (10 Qirat). Duration one year or more depending on student ability. Students will learn all ten Qirat with every riwayat through authentic sanad, following Shatibiyyah and Durrah.
-          </p>
-          <br>
-          <p>
-            বাংলা: ইজাযাহ মুত্তাসিল কুরআন কোর্স (১০ কিরাত)। সময়কাল এক বছর বা তার বেশি, শিক্ষার্থীর যোগ্যতার উপর নির্ভরশীল।
-          </p>
-          <br>
-          <button class="btn btn-secondary">Learn More</button>
-        </div>
-
-        <div class="card">
-          <span class="course-level">All Levels</span>
-          <div class="course-title">Arabic Language</div>
-          <div class="course-tags">
-            <span class="mini-tag badge-green">Online (Abroad)</span>
-            <span class="mini-tag badge-yellow">Offline (Bangladesh)</span>
-          </div>
-          <p>Build strong Arabic reading, writing, vocabulary, and grammar step by step.</p>
-          <br>
-          <button class="btn btn-secondary">Learn More</button>
-        </div>
-
-        <div class="card">
-          <span class="course-level">Structured Program</span>
-          <div class="course-title">Islamic Studies</div>
-          <div class="course-tags">
-            <span class="mini-tag badge-green">Online (Abroad)</span>
-            <span class="mini-tag badge-yellow">Offline (Bangladesh)</span>
-          </div>
-          <p>Explore aqeedah, fiqh, hadith, seerah, and essential Islamic knowledge.</p>
-          <br>
-          <button class="btn btn-secondary">Learn More</button>
-        </div>
+      <div style="padding: 40px;">
+        <p style="margin-bottom: 20px;">This course covers everything from Noorani Qaida for beginners to advanced Tajweed for Ijazah aspirants.</p>
+        <ul style="list-style: none; margin-bottom: 30px;">
+          <li style="margin-bottom: 10px;">✅ Certified Teachers</li>
+          <li style="margin-bottom: 10px;">✅ Personalized Feedback</li>
+          <li style="margin-bottom: 10px;">✅ Flexible Timings</li>
+        </ul>
+        <button onclick="closeAllModals()" class="btn-primary" style="width: 100%;">Close</button>
       </div>
     </div>
-  </section>
-
-  <section id="about" class="about-wrap">
-    <div class="container about-grid">
-      <div class="about-box">
-        <h3>Why students choose us</h3>
-        <p>
-          We combine quality teaching, supportive guidance, and flexible online and offline learning options so students can study comfortably in the way that suits them best.
-        </p>
-      </div>
-
-      <div class="feature-grid">
-        <div class="feature-item">Online classes available</div>
-        <div class="feature-item">Offline classes available</div>
-        <div class="feature-item">Experienced teachers</div>
-        <div class="feature-item">Female and male sections</div>
-        <div class="feature-item">Certificates after completion</div>
-        <div class="feature-item">Flexible class schedule</div>
-        <div class="feature-item">Student progress tracking</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="notices">
-    <div class="container">
-      <div class="section-title">
-        <p>Latest Notices / সর্বশেষ নোটিশ</p>
-        <h3>Important updates / গুরুত্বপূর্ণ আপডেট</h3>
-      </div>
-
-      <div class="grid-3">
-        <div class="card">
-          <h4>Admission Open / ভর্তি চলছে</h4>
-          <p>New student admission is now open for this session.</p>
-        </div>
-        <div class="card">
-          <h4>Weekend Class / সাপ্তাহিক ক্লাস</h4>
-          <p>Weekend Quran and Arabic classes are available in both online and offline mode.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container admission">
-      <div>
-        <p class="small">Admission Open / ভর্তি চলছে</p>
-        <h3>Start your learning journey today</h3>
-        <p>
-          Join our platform and get access to professional teachers, organized lessons, and flexible online or offline learning opportunities.
-        </p>
-      </div>
-
-      <form class="admission-form">
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Email Address">
-        <input type="text" placeholder="Phone Number">
-        <button type="button" class="btn btn-primary" style="width:100%;">Submit Application / আবেদন জমা দিন</button>
-      </form>
-    </div>
-  </section>
-
-  <button id="adminToggle" class="admin-toggle">Admin Login</button>
-
-  <div id="adminPanel" class="admin-panel">
-    <h3>Admin Login / এডমিন লগইন</h3>
-    <div id="loginError" class="login-error"></div>
-    <input type="email" id="adminEmail" placeholder="Admin Email">
-    <input type="password" id="adminPassword" placeholder="Password">
-    <button class="btn btn-primary" onclick="loginAdmin()">Login</button>
   </div>
 
-  <footer id="contact">
-    <div class="container footer-grid">
-      <div>
-        <h4>Markajul Imam Asthatobi</h4>
-        <div class="arabic">مركز الإمام الشاطبية</div>
-        <p style="margin-top: 12px; color:#047857;">
-          A trusted education platform for students seeking quality learning, Islamic education, and guided academic development.
-        </p>
-      </div>
-
-      <div class="footer-links">
-        <h5>Quick Links / গুরুত্বপূর্ণ লিংক</h5>
-        <p>Home / হোম</p>
-        <p>Courses / কোর্সসমূহ</p>
-        <p>About / সম্পর্কে</p>
-        <p>Notices / নোটিশ</p>
-        <p>Contact / যোগাযোগ</p>
-      </div>
-
-      <div class="contact">
-        <h5>Contact / যোগাযোগ</h5>
-        <p>Email: infomarkajulimamastobia@gmail.com</p>
-        <p>Phone: +8801323140320</p>
-        <p>Address: West Sanarpar, Demra, Dhaka, Bangladesh</p>
-        <iframe
-          src="https://maps.google.com/maps?q=Demra%20Dhaka&t=&z=13&ie=UTF8&iwloc=&output=embed"
-          loading="lazy">
-        </iframe>
-      </div>
-    </div>
-  </footer>
-
-  <a
-    class="whatsapp"
-    href="https://wa.me/8801323140320"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    WhatsApp
-  </a>
-
   <script>
-    const adminToggle = document.getElementById("adminToggle");
-    const adminPanel = document.getElementById("adminPanel");
-    const loginError = document.getElementById("loginError");
-
-    if (window.location.hash === "#secure-admin-panel") {
-      adminToggle.style.display = "block";
+    function toggleModal(id) {
+      document.getElementById(id).style.display = 'flex';
+      document.body.style.overflow = 'hidden';
     }
 
-    adminToggle.addEventListener("click", function () {
-      adminPanel.style.display = adminPanel.style.display === "block" ? "none" : "block";
+    function closeAllModals(e) {
+      const overlays = document.querySelectorAll('.modal-overlay');
+      overlays.forEach(o => o.style.display = 'none');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Scroll effect for nav
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 50) {
+        nav.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+      } else {
+        nav.style.boxShadow = 'none';
+      }
     });
-
-    function loginAdmin() {
-      const email = document.getElementById("adminEmail").value.trim();
-      const password = document.getElementById("adminPassword").value.trim();
-
-      if (email === "infomarkajulimamastobia@gmai
+  </script>
+</body>
+</html>
